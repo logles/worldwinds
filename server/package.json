@@ -23,6 +23,7 @@
     "dayjs": "^1.11.10",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "sequelize": "^6.37.5",
     "uuid": "^9.0.1"
   },
   "devDependencies": {
