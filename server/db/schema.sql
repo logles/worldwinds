@@ -1,0 +1,5 @@
+-- DROP DATABASE
+DROP DATABASE IF EXISTS worldwinds_db;
+
+-- CREATE DATABASE
+CREATE DATABASE worldwinds_db;
