@@ -1,5 +1,7 @@
+//config: This folder is used to store configuration files. These might include environment variables, database configurations, and any other settings that your application needs to run. Keeping these in a separate folder helps manage different environments (development, testing, production).
+
 import dotenv from "dotenv";
-dotenv.config(); // Load environment variables from a .env file into process.env
+dotenv.config();
 
 import { Sequelize } from "sequelize";
 
