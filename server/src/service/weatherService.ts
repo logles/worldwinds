@@ -1,13 +1,11 @@
 import dotenv from "dotenv";
 dotenv.config();
 
-// TODO: Define an interface for the Coordinates object
 interface Coordinates {
   latitude: number;
   longitude: number;
 }
 
-// TODO: Define a class for the Weather object
 class Weather {
   tempF: number;
   iconDescription: string;
@@ -36,21 +34,16 @@ class Weather {
   }
 }
 
-// TODO: Complete the WeatherService class
-// TODO: Complete the WeatherService class
 class WeatherService {
-  // TODO:  Define the baseURL, API key, and city name properties
   private baseURL: string = process.env.API_BASE_URL || "";
   private apiKey: string = process.env.API_KEY || "";
   private cityName: string = "";
 
-  // TODO: Create fetchAndDestructureLocationData method
   private async fetchAndDestructureLocationData(): Promise<Coordinates> {
     const locationData = await this.fetchLocationData(this.cityName);
     return this.destructureLocationData(locationData);
   }
 
-  // TODO: Create fetchLocationData method
   private async fetchLocationData(query: string): Promise<any> {
     const queryString = this.buildGeocodeQuery(query);
     const response = await fetch(queryString);
@@ -60,18 +53,15 @@ class WeatherService {
     return await response.json();
   }
 
-  // TODO:  Create buildGeocodeQuery method
   private buildGeocodeQuery(query: string): string {
     return `https://api.openweathermap.org/geo/1.0/direct?q=${query}&appid=${this.apiKey}`;
   }
 
-  // TODO:  Create destructureLocationData method
   private destructureLocationData(locationData: any): Coordinates {
     const { lat, lon } = locationData[0];
     return { latitude: lat, longitude: lon };
   }
 
-  // TODO: Create fetchWeatherData method
   private async fetchWeatherData(coordinates: Coordinates): Promise<any> {
     const queryString = this.buildWeatherQuery(coordinates);
 
@@ -82,12 +72,10 @@ class WeatherService {
     return await response.json();
   }
 
-  // TODO:  Create buildWeatherQuery method
   private buildWeatherQuery(coordinates: Coordinates): string {
     return `${this.baseURL}/data/2.5/forecast?lat=${coordinates.latitude}&lon=${coordinates.longitude}&appid=${this.apiKey}&units=metric`;
   }
 
-  // TODO:  Build parseCurrentWeather method
   private parseCurrentWeather(response: any): Weather {
     const { temp } = response.main;
     const { description, icon } = response.weather[0];
@@ -102,7 +90,6 @@ class WeatherService {
     );
   }
 
-  // TODO: Complete buildForecastArray method
   private buildForecastArray(
     currentWeather: Weather,
     weatherData: any[]
@@ -131,12 +118,11 @@ class WeatherService {
     //   return new Weather(temp, description, icon);
     // });
   }
-  // // New method to build the forecast query (ADDED BY LYDIA?)
+
   private buildForecastQuery(coordinates: Coordinates): string {
     return `${this.baseURL}/data/2.5/forecast?lat=${coordinates.latitude}&lon=${coordinates.longitude}&appid=${this.apiKey}&units=metric`;
   }
 
-  // // Add a new method to fetch forecast data (ADDED BY LYDIA?)
   private async fetchForecastData(coordinates: Coordinates): Promise<any> {
     const queryString = this.buildForecastQuery(coordinates);
     console.log(queryString, "query String");
@@ -147,7 +133,6 @@ class WeatherService {
     return await response.json();
   }
 
-  // TODO: Complete getWeatherForCity method
   public async getWeatherForCity(city: string) {
     this.cityName = city;
 
