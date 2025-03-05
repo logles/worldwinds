@@ -1,12 +1,14 @@
-import { Router } from 'express';
-import type { Request, Response } from 'express';
-import bcrypt from 'bcrypt';
-import { Profile } from '../../models/index.js';
+/*JWT Creat Password Profile*/
+
+import { Router } from "express";
+import type { Request, Response } from "express";
+import bcrypt from "bcrypt";
+import { Profile } from "../../models/index.js";
 
 const router = Router();
 
 // CREATE a new profile
-router.post('/', async (req: Request, res: Response) => {
+router.post("/", async (req: Request, res: Response) => {
   try {
     const newProfile = req.body;
     newProfile.password = await bcrypt.hash(req.body.password, 10);
