@@ -8,6 +8,7 @@ import { Sequelize } from "sequelize";
 // Initialize a Sequelize instance to connect to the PostgreSQL database.
 // If DB_URL is provided in the environment variables, use it directly.
 // Otherwise, use individual environment variables for database name, user, and password.
+console.log(process.env.DB_NAME, "process.env");
 const sequelize = process.env.DB_URL
   ? new Sequelize(process.env.DB_URL)
   : new Sequelize(
