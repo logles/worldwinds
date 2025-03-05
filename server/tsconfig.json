@@ -2,6 +2,7 @@
   "extends": "../tsconfig.json",
   "compilerOptions": {
     /* Modules */
+    "exactOptionalPropertyTypes": false,
     "rootDir": "src" /* Specify the root folder within your source files. */,
 
     /* Emit */
