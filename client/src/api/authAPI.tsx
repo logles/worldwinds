@@ -1,7 +1,9 @@
-// import { UserLogin } from "../interfaces/UserLogin";
+//function where I get a fet request to the api/login (on the back end)
 
-// const login = async (userInfo: UserLogin) => {
-//   // TODO: make a POST request to the login route
-// }
+import { UserLogin } from "../interfaces/UserLogin";
 
-// export { login };
+const login = async (userInfo: UserLogin) => {
+  //TODO Add function
+};
+
+export { login };
