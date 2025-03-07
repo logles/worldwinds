@@ -9,7 +9,9 @@
     "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true
+    "noEmit": true,
+
+    "jsx": "react-jsx"
   },
-  "include": ["src"]
+  "include": ["src", "src/utils", "pages", "vite-env.d.ts"]
 }

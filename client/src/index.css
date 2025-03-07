@@ -1,0 +1,432 @@
+/*contact.css*/
+.error {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.contact-container {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form label {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact-form textarea {
+  height: 100px;
+}
+
+.contact-form button {
+  background-color: #171717;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: grey;
+}
+
+/*Footer css*/
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #171717;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer__links {
+  display: flex;
+  gap: 20px;
+  margin-top: 10px;
+}
+
+.footer__links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer__links a:hover {
+  color: #bbbbbb;
+}
+
+#root > div > footer > div > a:nth-child(1)
+
+/*nav/hearder css*/
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #0d0d0d;
+  color: white;
+}
+
+h1.header__title {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-family: sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  background-color: #171717;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 100vw;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.header__title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+}
+
+/* Navigation */
+.nav {
+  display: flex;
+}
+
+#root > div > header > h1 > img {
+  height: 70px;
+}
+
+@keyframes logoSwing {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.header__logo {
+  width: auto;
+  height: auto;
+  animation: logoSwing 2s infinite ease-in-out;
+}
+
+.nav__list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav__item {
+  display: flex;
+}
+
+.nav__button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px 15px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav__button::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -3px;
+  width: 0;
+  height: 3px;
+  background: white;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav__button:hover {
+  color: #bbb;
+}
+
+.nav__button:hover::after {
+  width: 100%;
+}
+
+/*portfolio css*/
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: row;
+  background: #ffffff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-image-container {
+  width: 33%;
+  overflow: hidden;
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.1);
+}
+
+.project-details {
+  width: 67%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.project-details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.project-details p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.project-button {
+  display: inline-block;
+  padding: 10px 15px;
+  background: #171717;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  text-align: center;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+.project-button:hover {
+  background: #171717;
+  transform: translateY(-3px);
+}
+
+a.project-buttonTwo {
+  text-align: center;
+  padding-top: 10px;
+  color: black;
+  text-decoration: none;
+}
+
+#root
+  > div
+  > main
+  > div
+  > div:nth-child(1)
+  > div.project-details
+  > a.project-buttonTwo,
+#root
+  > div
+  > main
+  > div
+  > div:nth-child(4)
+  > div.project-details
+  > a.project-buttonTwo,
+#root
+  > div
+  > main
+  > div
+  > div:nth-child(6)
+  > div.project-details
+  > a.project-buttonTwo {
+  display: none;
+}
+/*profile css*/
+.about-me {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  text-align: left;
+}
+
+.about-me-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.avatar-image {
+  width: 150px;
+  height: 350px;
+  object-fit: cover;
+}
+
+.about-text {
+  flex: 1;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.slider-container {
+  overflow: hidden;
+  white-space: nowrap;
+  margin-top: 30px;
+  padding: 10px 0;
+}
+
+.slider {
+  display: flex;
+  animation: scroll 15s linear infinite;
+}
+
+.language-icon {
+  max-width: 50px;
+  height: 50px;
+  margin: 0 15px;
+}
+
+/* @keyframes scroll {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+} */
+
+body {
+  padding-top: 80px;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 120px;
+    margin-bottom: 100px;
+  }
+
+  .project-card {
+    flex-direction: row;
+  }
+
+  .project-image-container {
+    width: 100%;
+    height: 200px;
+  }
+
+  .project-details {
+    width: 100%;
+  }
+
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav__list {
+    flex-direction: row;
+    gap: 0px;
+  }
+
+  .about-me-content {
+    display: block;
+  }
+
+  .avatar-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+
+  /* .slider {
+    justify-content: center;
+    animation: scroll 15s linear infinite; /* Slower scroll for mobile 
+  } */
+
+  .language-icon {
+    max-width: 40px;
+    height: 40px;
+    margin: 0 10px;
+  }
+
+  .about-me p,
+  .about-me ul {
+    max-width: 90%;
+  }
+}
+
+img.header__logo {
+  height: 90px !important;
+}
