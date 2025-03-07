@@ -154,7 +154,7 @@ h1.header__title {
 .header__logo {
   width: auto;
   height: auto;
-  animation: logoSwing 2s infinite ease-in-out;
+  height: 90px;
 }
 
 .nav__list {
@@ -425,8 +425,4 @@ body {
   .about-me ul {
     max-width: 90%;
   }
-}
-
-img.header__logo {
-  height: 90px !important;
 }
