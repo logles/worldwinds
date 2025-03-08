@@ -89,3 +89,5 @@ export function ProfileFactory(sequelize: Sequelize) {
 
   return Profile;
 }
+
+//TODO create register form with above information
