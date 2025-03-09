@@ -31,7 +31,10 @@ function App() {
           <Register setActiveSection={setActiveSection} />
         )}
       </main>
-      <Footer />
+      <Footer
+        setActiveSection={setActiveSection}
+        setIsAuthenticated={setIsAuthenticated}
+      />
     </div>
   );
 }
