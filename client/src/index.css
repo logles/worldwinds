@@ -91,7 +91,11 @@
 body {
   margin: 0;
   font-family: "Arial", sans-serif;
-  background-color: #0d0d0d;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.5),
+      rgba(255, 255, 255, 0.5)
+    ),
+    url("./assets/earth.jpg") no-repeat center center;
   color: white;
   padding-left: 0px;
   margin-left: 0px;
@@ -118,7 +122,6 @@ h1.header__title {
   max-width: 100vw;
   overflow: hidden;
   z-index: 100;
-  margin-left: -40px !important;
 }
 
 .header__title {
@@ -454,9 +457,9 @@ body {
   flex-direction: column;
 }
 
-.register-page form div {
+/* .register-page form div {
   margin-bottom: 1rem;
-}
+} */
 
 .register-page form label {
   display: block;
@@ -570,4 +573,27 @@ body {
 
 .about-me form button:hover {
   background: #0056b3;
+}
+
+.reset-button {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  background: grey;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3sease;
+  margin-top: 30px;
+}
+
+.save-button {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 4px;
+  background: green;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3sease;
 }

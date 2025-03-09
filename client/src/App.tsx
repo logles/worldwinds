@@ -5,7 +5,9 @@ import Footer from "./components/footer";
 import Header from "./components/header";
 import Register from "./pages/register";
 import { useState } from "react";
+
 import "./index.css";
+
 // import "./App.css";
 
 function App() {
@@ -29,7 +31,10 @@ function App() {
           <Register setActiveSection={setActiveSection} />
         )}
       </main>
-      <Footer />
+      <Footer
+        setActiveSection={setActiveSection}
+        setIsAuthenticated={setIsAuthenticated}
+      />
     </div>
   );
 }

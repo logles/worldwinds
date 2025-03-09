@@ -5,9 +5,9 @@ const searchForm: HTMLFormElement = document.getElementById(
 const searchInput: HTMLInputElement = document.getElementById(
   "search-input"
 ) as HTMLInputElement;
-// const countryContainer = document.getElementById(
-//   "country-container"
-// ) as HTMLDivElement;
+const countryContainer = document.getElementById(
+  "country-container"
+) as HTMLDivElement;
 
 /*
 API Calls
@@ -30,18 +30,18 @@ export const fetchCountry = async (countryName: string) => {
 Render Function
 */
 
-// const renderCountry = (country: any): void => {
-//   const { name, capital, region, subregion, currency, language } = country;
+const renderCountry = (country: any): void => {
+  const { name, capital, region, subregion, currency, language } = country;
 
-//   countryContainer.innerHTML = `
-//     <h2>${name}</h2>
-//     <p><strong>Capital:</strong> ${capital}</p>
-//     <p><strong>Region:</strong> ${region}</p>
-//     <p><strong>Subregion:</strong> ${subregion}</p>
-//     <p><strong>Currency:</strong> ${currency}</p>
-//     <p><strong>Languages:</strong> ${language.join(", ")}</p>
-//   `;
-// };
+  countryContainer.innerHTML = `
+    <h2>${name}</h2>
+    <p><strong>Capital:</strong> ${capital}</p>
+    <p><strong>Region:</strong> ${region}</p>
+    <p><strong>Subregion:</strong> ${subregion}</p>
+    <p><strong>Currency:</strong> ${currency}</p>
+    <p><strong>Languages:</strong> ${language.join(", ")}</p>
+  `;
+};
 
 /*
 Event Handler
