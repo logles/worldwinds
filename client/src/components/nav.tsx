@@ -26,7 +26,7 @@ function Nav({ setActiveSection }: NavProps) {
         <li className="nav__item">
           <button
             className="nav__button"
-            onClick={() => setActiveSection("resume")}
+            onClick={() => setActiveSection("Login")}
           >
             Login
           </button>
