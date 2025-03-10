@@ -41,10 +41,15 @@ const RegisterPage: React.FC<RegisterPageProps> = ({ setActiveSection }) => {
         body: JSON.stringify(formData),
       });
 
+      console.log("form data", formData);
+
+      //THIS IS WHERE THE ERROR IS HAPPENING, not printing response.ok
       if (!response.ok) {
+        console.log("response.ok", response.ok);
         const errorData = await response.json();
         throw new Error(errorData.message || "Registration failed");
       }
+      console.log("response.json", response.json);
 
       setMessage("Registration successful!");
       // Clear the form
@@ -57,6 +62,7 @@ const RegisterPage: React.FC<RegisterPageProps> = ({ setActiveSection }) => {
       // Redirect to the homepage
       setActiveSection("Home");
     } catch (error: any) {
+      console.log("response err");
       setMessage(`Error: ${error.message}`);
     }
   };
